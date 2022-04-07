@@ -11,8 +11,8 @@ public class MainClass
 
     public static void Main()
     {
-        string examplePath = @"C:\Users\Izagakhmaevra\Desktop\хеш файлы\769817.png";
-        string dirName = @"C:\Users\Izagakhmaevra\Desktop\хеш файлы";
+        string examplePath = @"D:\dagbti-catalogy\First Sector\21\1323847\769813.png";
+        string dirName = @"D:\dagbti-catalogy\First Sector";
         string hash = GetFileHash(examplePath);
 
         string[] files = Directory.GetFiles(dirName, "*.png", SearchOption.AllDirectories);
@@ -33,6 +33,7 @@ public class MainClass
                 nonhash++;
             }    
         }
+        Console.WriteLine($"Общее кол-во файлов {hashs + nonhash}");
         Console.WriteLine($"Всего обнаружено {hashs} hash файлов и {nonhash} nonhash файлов\nУдалено {hashs} hash файлов");
     }
 }
